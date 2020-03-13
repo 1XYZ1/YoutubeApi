@@ -30,8 +30,6 @@ export class YoutubeService {
       .append("key", this.apiKey)
       .append("pageToken", this.nextPageToken);
 
-    console.log(params2);
-
     if (this.nextPageToken) {
       return this.http.get(url, { params: params2 });
     } else {

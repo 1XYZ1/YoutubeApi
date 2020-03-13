@@ -26,9 +26,7 @@ export class HomeComponent implements OnInit {
           let snippet = video.snippet;
           vid2.push(snippet);
         }
-        console.log(vid2);
         this.videos.push.apply(this.videos, vid2);
-        console.log(this.videos);
         return vid2;
       }
       this.nextPageToken = res.nextPageToken;
@@ -39,7 +37,6 @@ export class HomeComponent implements OnInit {
         vid.push(snippet);
       }
       this.videos = vid;
-      console.log(vid);
 
       return vid;
     });
